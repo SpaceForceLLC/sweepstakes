@@ -1,0 +1,53 @@
+
+
+<h1>Melbourne Cup 2014 <br>
+  <small>$10 Sweep</small></h1>
+<br>
+<div class="row">
+
+
+
+
+<%= render 'horses_available' %>
+
+  <div class="col-md-4">
+    <table class="table table-striped">
+      <thead>
+        <th colspan="2"><h4>Prize pool: <%= number_to_currency(Horse.horse_count * 10) %></h4></th>
+      </thead>
+      <tr>
+          <td style="width: 20px">1st: </td>
+          <td>$0 </td>
+      </tr>
+      <tr>
+        <td>2nd: </td>
+        <td>$0 </td>
+
+      </tr>
+      <tr>
+        <td>3rd: </td>
+        <td>$0 </td>
+      </tr>
+      <thead>
+        <th colspan="2" style="width: 20px"><h4>Backers: <%= Horse.horse_count %></h4></th>
+      </thead>
+      <thead>
+        <th colspan="2" style="width: 20px"><h4>Spaces left: <%= Horse.horses_left %></h4></th>
+      </thead>
+    </table>
+
+    <br>
+    <div>
+      <h4>Some text can go here...</h4>
+    </div>
+  </div>
+
+
+<div class="row text-right">
+</div>
+
+</div>
+<%= link_to "Admin", register_horse_horses_path, class: "btn btn-primary" %>
+
+<br>
+<br>

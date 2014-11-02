@@ -1,0 +1,20 @@
+<div class="col-md-8">
+<table class="table">
+  <thead>
+    <th><%= sortable_column 'ID', :column => 'id' %></th>
+    <th><%= sortable_column 'Horse', :column => 'hname' %></th>
+    <th><%= sortable_column 'Jockey', :column => 'trainer' %></th>
+    <th><%= sortable_column 'Odds', :column => 'odds' %></th>
+    <th><%= sortable_column 'Backer', :column => 'bname' %></th>
+  </thead>
+  <% @horses.each do |horse| %>
+      <tr class=<%= backed?(horse)%>>
+        <td><strong><%= horse.id %></strong></td>
+        <td><%= horse.hname %></td>
+        <td><%= horse.trainer %></td>
+        <td><%= number_to_currency(horse.odds) %></td>
+        <td><%= horse.bname %></td>
+      </tr>
+  <% end %>
+</table>
+</div>

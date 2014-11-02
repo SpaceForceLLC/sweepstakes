@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hname: MyString
+  trainer: MyString
+  odds: 1
+  assigned: false
+  bname: MyString
+
+two:
+  hname: MyString
+  trainer: MyString
+  odds: 1
+  assigned: false
+  bname: MyString

@@ -1,0 +1,19 @@
+<h4>Horses taken</h4>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Horse</th>
+    <th>Backer</th>
+  </tr>
+  <% horses_taken?.each do |horse| %>
+  <tr>
+    <td><%= horse.id %></td>
+    <td><%= horse.hname %></td>
+    <td><%= horse.bname %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+

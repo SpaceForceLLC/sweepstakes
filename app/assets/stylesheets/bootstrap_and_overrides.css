@@ -1,0 +1,56 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+.success {
+    font-weight: bold;
+}
+
+a:link {
+    color: #ffffff!important;
+}
+
+/* visited link */
+a:visited {
+    color: #ffffff!important;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightblue!important;
+}
+
+/* selected link */
+a:active {
+    color: #ffffff!important;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+thead th {
+    background-color: #006DCC;
+    color: white;
+}
+
+tbody td {
+    background-color: #ffffff;
+}
+
+tr td:first-child,
+tr th:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
