@@ -10,10 +10,10 @@
   <% @horses.each do |horse| %>
       <tr class=<%= backed?(horse)%>>
         <td><strong><%= horse.id %></strong></td>
-        <td><%= horse.hname %></td>
+        <td><strong><%= horse.hname %></strong></td>
         <td><%= horse.trainer %></td>
         <td><%= number_to_currency(horse.odds) %></td>
-        <td><%= horse.bname %></td>
+        <td><strong><%= horse.bname %></strong></td>
       </tr>
   <% end %>
 </table>

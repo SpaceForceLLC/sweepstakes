@@ -1,0 +1,63 @@
+
+<h1>Melbourne Cup 2014 <br>
+  <small>$<%= @sweep.value %> Sweep</small></h1>
+<br>
+<div class="row">
+
+  <div class="col-md-8">
+    <table class="table">
+      <thead>
+      <th>ID</th>
+      <th>Horse</th>
+      <th>Jockey</th>
+      <th>Odds</th>
+      <th>Backer</th>
+      </thead>
+      <% @sweep.horses.each do |horse| %>
+          <tr class=<%= backed?(horse)%>>
+            <td><strong><%= horse.hnumber %></strong></td>
+            <td><strong><%= horse.hname %></strong></td>
+            <td><%= horse.trainer %></td>
+            <td><%= number_to_currency(horse.odds) %></td>
+            <td><strong><%= horse.bname %></strong></td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <table class="table table-striped">
+      <thead>
+      <th colspan="2"><h4>Prize pool: <%= number_to_currency(Horse.horse_count(@sweep) * 10) %></h4></th>
+      </thead>
+      <tr>
+        <td style="width: 20px">1st: </td>
+        <td>$0 </td>
+      </tr>
+      <tr>
+        <td>2nd: </td>
+        <td>$0 </td>
+
+      </tr>
+      <tr>
+        <td>3rd: </td>
+        <td>$0 </td>
+      </tr>
+      <thead>
+      <th colspan="2" style="width: 20px"><h4>Backers: <%= Horse.horse_count(@sweep) %></h4></th>
+      </thead>
+      <thead>
+      <th colspan="2" style="width: 20px"><h4>Spaces left: <%= 24 - Horse.horse_count(@sweep) %></h4></th>
+      </thead>
+    </table>
+
+    <br>
+    <div>
+      <h4>Some text can go here...</h4>
+    </div>
+  </div>
+</div>
+<div class="row text-right">
+  <%= link_to "Admin", register_horse_sweep_horses_url(@sweep), class: "btn btn-danger btn-small" %>
+</div>
+<br>
+<br>

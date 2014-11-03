@@ -1,0 +1,20 @@
+<div class="col-md-8">
+<table class="table">
+  <thead>
+    <th>ID</th>
+    <th>Horse</th>
+    <th>Jockey</th>
+    <th>Odds</th>
+    <th>Backer</th>
+  </thead>
+  <% @sweep.each do |sweep| %>
+
+        <td><strong><%= sweep.horse.id %></strong></td>
+        <td><strong><%= sweep.horse.hname %></strong></td>
+        <td><%= sweep.horse.trainer %></td>
+        <td><%= number_to_currency(sweep.horse.odds) %></td>
+        <td><strong><%= sweep.horse.bname %></strong></td>
+      </tr>
+  <% end %>
+</table>
+</div>

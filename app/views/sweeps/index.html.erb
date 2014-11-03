@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="jumbotron text-center">
+      <h1>Melbourne Cup 2014</h1>
+      <br>
+      <p>Pick a sweep to get started...</p>
+      <% @sweeps.each do |sweep| %>
+        <%= link_to "$#{sweep.value} sweep", sweep_path(sweep), class: 'btn btn-primary btn-xlarge' %>
+      <% end %>
+    </div>
+</div>
+

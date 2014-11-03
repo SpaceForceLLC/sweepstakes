@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102124054) do
+ActiveRecord::Schema.define(version: 20141103123503) do
 
   create_table "horses", force: true do |t|
     t.string   "hname"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20141102124054) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "hnumber"
+    t.integer  "sweep_id"
+  end
+
+  add_index "horses", ["sweep_id"], name: "index_horses_on_sweep_id"
+
+  create_table "sweeps", force: true do |t|
+    t.integer  "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -23,7 +23,8 @@ class HorsesController < ApplicationController
 
   def assign_horse
     backer = params[:horse]
-    horse = Horse.find_random_horse
+    sweep = params[:sweep_id]
+    horse = Horse.find_random_horse(sweep)
     if horse == nil
       redirect_to root_path, notice: "No horses left"
     else

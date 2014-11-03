@@ -1,10 +1,11 @@
 <div class="col-md-4">
-  <h1>Input backer name: </h1>
+  <h1>Input backer name: <%= request.original_url %> </h1>
 
     <%= form_tag({controller: "horses", action: "assign_horse"}, method: "put", class: "form") do %>
     <ul class="list-group">
         <li class="list-group-item">
             <%= text_field_tag(:horse) %></li>
+
     </ul>
     <div class="buttons"><%= submit_tag("Pick random horse", class: "btn btn-danger") %></div>
     <% end %>

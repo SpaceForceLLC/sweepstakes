@@ -6,26 +6,30 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+
+.container {
+    margin-top: 15px;
+}
 .success {
     font-weight: bold;
 }
 
-a:link {
+table a:link {
     color: #ffffff!important;
 }
 
 /* visited link */
-a:visited {
+table a:visited {
     color: #ffffff!important;
 }
 
 /* mouse over link */
-a:hover {
+table a:hover {
     color: lightblue!important;
 }
 
 /* selected link */
-a:active {
+table a:active {
     color: #ffffff!important;
 }
 
@@ -53,4 +57,13 @@ tr td:last-child,
 tr th:last-child {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
 }
