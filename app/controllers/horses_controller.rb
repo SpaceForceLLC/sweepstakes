@@ -1,5 +1,6 @@
 class HorsesController < ApplicationController
   handles_sortable_columns
+  before_filter :authenticate, except: [:index]
 
   def index
     order = sortable_column_order
@@ -37,6 +38,13 @@ class HorsesController < ApplicationController
     params.require(:horse).permit(:hname, :trainer, :odds, :assigned, :bname, :hnumber)
   end
 
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      username == "william" && password == "Infront01"
+    end
+  end
 
 
 
